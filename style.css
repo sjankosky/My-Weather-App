@@ -1,0 +1,83 @@
+body {
+  /* think about renaming the body into a div name to house this */
+  border: 2px solid #596aca;
+  margin: 20px;
+  /* margin: 20px auto; */
+  padding: 10px;
+  /* max-width: 600px; */
+  /* border-radius: 10px -- makes curved border line */
+}
+h1 {
+  color: #42a5f5;
+  text-align: center;
+}
+h2 {
+  /* color: #5a6275; */
+  font-size: 26px;
+  text-align: center;
+  font-style: italic;
+}
+form {
+  text-align: center;
+}
+footer {
+  text-align: center;
+}
+
+.line {
+  border-top: 4px solid #d9edfd;
+}
+.enterCity {
+  border-color: #596aca;
+  border-width: medium;
+  border-style: solid;
+}
+.search,
+.currentTemp {
+  background: white;
+  color: #596aca;
+  border-color: #596aca;
+  transition: all 150ms ease-in-out;
+  border-width: medium;
+  border-style: solid;
+}
+.search:hover,
+.currentTemp:hover {
+  cursor: pointer;
+  background: #596aca;
+  color: white;
+}
+.today {
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-width: thick;
+  border-color: #1ab2a8;
+  color: #1ab2a8;
+  font-size: 20px;
+  padding: 10px 40px;
+}
+
+.present {
+  color: #5a6275;
+  font-weight: bolder;
+  font-size: 30px;
+  padding: 30px 0;
+}
+.formatTemp {
+  font-size: 15px;
+}
+#farenheit {
+  padding-left: 5px;
+}
+.weatherEmoji {
+  font-size: 40px;
+}
+.forecast {
+  border-color: #1ab2a8;
+  border-width: medium;
+  color: #1ab2a8;
+  text-align: center;
+}
