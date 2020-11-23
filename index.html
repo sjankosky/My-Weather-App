@@ -17,7 +17,7 @@
         <div class="weather-app-wrapper">
         <div class="weather-app">
         <h1>Weather Check</h1>
-        <h2 id="date-header"></h2>
+        <!-- <h2 id="date-header"></h2> -->
         <hr class="line" />
         <form id="search-city">
             <input class="enterCity" type="text" placeholder="Enter City" id="enter-city" autofocus></input>
@@ -31,12 +31,12 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6">
-                            <h5 class="card-title present">Current</h5>
+                            <!-- <h5 class="card-title present">Current</h5> -->
+                            <h5 class="current-date" id="date-header"></h5>
                         </div>
                         <div class="col-6">
-                            <p class="card-text"> <span id="store-city">Honolulu, HI</span><br /> <span
-                                    id="current-temp">86</span>°<a class="formatTemp" id="farenheit">F</a> | <a
-                                    class="formatTemp" id="celsius">C</a> <span class="weatherEmoji"> 🌤</span></p>
+                            <p class="card-text"> <span id="store-city">Honolulu, HI</span><br /> 
+                                <span id="current-temp">86</span><span class="formatDegree">°</span><span class="formatUnits"> <a href="#" class="active" id="farenheit">F</a> | <a href="#" class="active" id="celsius">C</a></span><span class="weatherEmoji"> 🌤</span></p>
                         </div>
                     </div>
                 </div>
