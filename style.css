@@ -1,11 +1,11 @@
-body {
+.weather-app-wrapper {
   /* think about renaming the body into a div name to house this */
   border: 2px solid #596aca;
-  margin: 20px;
-  /* margin: 20px auto; */
-  padding: 10px;
-  /* max-width: 600px; */
-  /* border-radius: 10px -- makes curved border line */
+  /* margin: 20px; */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 10px; /*not sold on this*/
 }
 h1 {
   color: #42a5f5;
