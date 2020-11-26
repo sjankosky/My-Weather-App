@@ -42,11 +42,17 @@ function displayWeather(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
+  document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 
 function searchCity(city) {
   let apiKey = "ed2d0610004cfa337a722371f4a4d4a7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
   // console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
 }
