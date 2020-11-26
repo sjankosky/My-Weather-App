@@ -6,17 +6,21 @@
   padding: 20px;
   max-width: 1200px;
   border-radius: 10px; /*not sold on this*/
+  background: #e0e9f1;
+}
+body {
+  background: #aab0bb;
 }
 h1 {
   color: #42a5f5;
   text-align: center;
 }
-h2 {
-  /* color: #5a6275; */
+/* h2 {
+  color: #5a6275;
   font-size: 26px;
   text-align: center;
   font-style: italic;
-}
+} */
 form {
   text-align: center;
 }
@@ -97,4 +101,8 @@ footer {
   border-width: medium;
   color: #1ab2a8;
   text-align: center;
+}
+.list-group-item-inner {
+  list-style: none;
+  margin: 5px;
 }
