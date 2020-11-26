@@ -47,10 +47,9 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //store the City name on the page after searching for it with the search engine
 function displayWeather(response) {
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#store-city").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
   document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
   document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -63,6 +62,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  farenheitTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -102,26 +103,36 @@ function getCurrentLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
+//Change temperature if you select Farenehit
+function updateFarenheit(event) {
+  event.preventDefault();
+  let farenheitTemp = document.querySelector("#current-temp");
+  //when you click Farenheit, this removes the active class from Celsius and gives it to Farenheit
+  farenheit.classList.add("active");
+  celsius.classList.remove("active");
+  farenheitTemp.innerHTML = Math.round(farenheitTemperature);
+}
+let farenheit = document.querySelector("#farenheit");
+farenheit.addEventListener("click", updateFarenheit);
+
+//Change temperature if you select Celsius
+function updateCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  //when you click Celsius, this removes the active class from Farenheit and gives it to Celsius
+  farenheit.classList.remove("active");
+  celsius.classList.add("active");
+  let celsiusTemp = ((farenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", updateCelsius);
+
+//This ensures that each time you select the F&C the temperature value is reset to current temp. That way the celsius calculation won't keep working on the previous value
+let farenheitTemperature = null;
+
 //this allows for a default city and values to appear each time
 searchCity("Honolulu");
-
-// //Change temperature if you select Farenehit
-// function updateFarenheit(event) {
-//   event.preventDefault;
-//   let farenheitTemp = document.querySelector("#current-temp");
-//   farenheitTemp.innerHTML = `86°`;
-// }
-// let farenheit = document.querySelector("#farenheit");
-// farenheit.addEventListener("click", updateFarenheit);
-
-// //Change temperature if you select Celsius
-// function updateCelsius(event) {
-//   event.preventDefault;
-//   let celsiusTemp = document.querySelector("#current-temp");
-//   celsiusTemp.innerHTML = `28°`;
-// }
-// let celsius = document.querySelector("#celsius");
-// celsius.addEventListener("click", updateCelsius);
 
 //Retrieving Cities
 // let weather = {
