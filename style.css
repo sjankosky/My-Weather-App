@@ -52,7 +52,7 @@ footer {
   color: white;
 }
 
-.current-date {
+h5 {
   color: #5a6275;
   font-weight: bolder;
   font-style: italic;
@@ -104,5 +104,5 @@ footer {
 }
 .list-group-item-inner {
   list-style: none;
-  margin: 5px;
+  margin: 0px 5px;
 }

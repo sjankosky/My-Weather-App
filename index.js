@@ -12,7 +12,15 @@ function formatDate(date) {
     mins = `0${mins}`;
   }
   let year = date.getFullYear();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[date.getDay()]; //returns value between 0 and 6 - 0 is Sunday
   let months = [
     "Jan",
@@ -30,7 +38,8 @@ function formatDate(date) {
   ];
 
   let month = months[date.getMonth()];
-  return `${day}, ${month} ${currentDate} ${year} <br /> ${hours}:${mins}`;
+  return `${day} ${hours}:${mins}`;
+  // return `${day}, ${month} ${currentDate} ${year} <br /> ${hours}:${mins}`;
 }
 let dateElement = document.querySelector("#date-header");
 let currentTime = new Date();
@@ -48,6 +57,12 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  console.log(response.data);
 }
 
 function searchCity(city) {
