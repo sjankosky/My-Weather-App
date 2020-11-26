@@ -45,7 +45,9 @@ footer {
   background: #596aca;
   color: white;
 }
-
+.card-text {
+  margin-bottom: 10px;
+}
 .current-date {
   color: #5a6275;
   /* font-weight: bolder; */
@@ -54,6 +56,9 @@ footer {
   line-height: 1;
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
+}
+.current-date::first-letter {
+  text-transform: capitalize;
 }
 .city-date-position {
   margin-top: 25px;

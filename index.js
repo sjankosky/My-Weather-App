@@ -49,6 +49,8 @@ dateElement.innerHTML = formatDate(currentTime);
 function displayWeather(response) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#current-description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#store-city").innerHTML = response.data.name;
   document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
   document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
