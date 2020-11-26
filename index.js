@@ -90,7 +90,7 @@ function showPosition(position) {
   // console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let units = "metric";
+  let units = "imperial";
   let apiKey = "ed2d0610004cfa337a722371f4a4d4a7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   // console.log(apiUrl);
@@ -135,44 +135,3 @@ let farenheitTemperature = null;
 
 //this allows for a default city and values to appear each time
 searchCity("Honolulu");
-
-//Retrieving Cities
-// let weather = {
-//   paris: {
-//     temp: 19.7,
-//     humidity: 80,
-//   },
-//   tokyo: {
-//     temp: 17.3,
-//     humidity: 50,
-//   },
-//   lisbon: {
-//     temp: 30.2,
-//     humidity: 20,
-//   },
-//   "san francisco": {
-//     temp: 20.9,
-//     humidity: 100,
-//   },
-//   moscow: {
-//     temp: -5,
-//     humidity: 20,
-//   },
-// };
-
-// let city = prompt("Enter a city").toLowerCase().trim();
-
-// if (weather[city] !== undefined) {
-//   let temperature = weather[city].temp; //the weather[city] finds the value inputted for the "city" object, finds within the weather object and pulls in the info there//
-//   let humidity = weather[city].humidity;
-//   let celsius = Math.round(temperature);
-//   let farenheit = Math.round((temperature * 9) / 5 + 32);
-
-//   alert(
-//     `It is currently ${celsius}°C (${farenheit}°F) in ${city} with a humidity of ${humidity}%`
-//   );
-// } else {
-//   alert(
-//     `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-//   );
-// }
