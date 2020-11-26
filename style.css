@@ -15,12 +15,6 @@ h1 {
   color: #42a5f5;
   text-align: center;
 }
-/* h2 {
-  color: #5a6275;
-  font-size: 26px;
-  text-align: center;
-  font-style: italic;
-} */
 form {
   text-align: center;
 }
@@ -52,13 +46,17 @@ footer {
   color: white;
 }
 
-h5 {
+.current-date {
   color: #5a6275;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-style: italic;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1;
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+}
+.city-date-position {
+  margin-top: 25px;
 }
 .today {
   text-align: center;
@@ -69,7 +67,7 @@ h5 {
   border-width: thick;
   border-color: #1ab2a8;
   color: #1ab2a8;
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px 40px;
 }
 
