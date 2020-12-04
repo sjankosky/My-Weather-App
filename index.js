@@ -45,6 +45,22 @@ let dateElement = document.querySelector("#date-header");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+//to get timestamp
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    //this ensures that if it's 9am in the morning, it will show as `09`//
+    hours = `0${hours}`;
+  }
+  let mins = date.getMinutes();
+  if (mins < 10) {
+    //this ensures that if it's 9:05am in the morning, it will show as `09:05` instead of `09:5`//
+    mins = `0${mins}`;
+  }
+  return `${hours}:${mins}`;
+}
+
 //store the City name on the page after searching for it with the search engine
 function displayWeather(response) {
   let temperatureElement = document.querySelector("#current-temp");
@@ -52,8 +68,15 @@ function displayWeather(response) {
   document.querySelector("#current-description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#store-city").innerHTML = response.data.name;
-  document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
-  document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
+  // document.querySelector("#sunrise").innerHTML = new Date(
+  //   response.data.sys.sunrise * 1000
+  // );
+  document.querySelector("#sunrise").innerHTML = formatHours(
+    response.data.sys.sunrise * 1000
+  );
+  document.querySelector("#sunset").innerHTML = formatHours(
+    response.data.sys.sunset * 1000
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -67,12 +90,33 @@ function displayWeather(response) {
 
   farenheitTemperature = response.data.main.temp;
 }
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` <div class="col-2">
+                        <h5 class="card-title">${formatHours(
+                          forecast.dt * 1000
+                        )}</h5>
+                        <p class="card-text">${Math.round(
+                          forecast.main.temp_max
+                        )}° F <span><img class="weatherEmoji" src="http://openweathermap.org/img/wn/${
+      forecast.weather[0].icon
+    }@2x.png" /></p></span></p>
+                    </div>`;
+  }
+}
 
 function searchCity(city) {
   let apiKey = "ed2d0610004cfa337a722371f4a4d4a7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-  // console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
+  //url for forecast weather//
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {

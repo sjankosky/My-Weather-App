@@ -30,12 +30,12 @@
             <div class="card today">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-6 city-date-position">
+                        <div class="col city-date-position">
                             <!-- <h5 class="card-title present">Current</h5> -->
                         <p class="card-text"> <span id="store-city"></span><br />
                             <p class="current-date"><span id="current-description"></span><br /><br />Last updated: <span  id="date-header"></span></p></p>
                         </div>
-                        <div class="col-6">
+                        <div class="col">
                             <!-- <p class="card-text"> <span id="store-city">Honolulu, HI</span><br />  -->
                                 <span id="current-temp"></span><span class="formatDegree">°</span><span class="formatUnits"> <a href="#" class="active" id="farenheit">F</a> | <a href="#" id="celsius">C</a></span><img src="" alt="" id="icon"></p>
                         </div>
@@ -43,8 +43,10 @@
                 </div>
                 <div class="extra">
                     <ul class="list-group list-group-horizontal-sm">
-                        <li class="list-group-item-inner"><button type="button" class="btn btn-warning">Sunrise: <span id="sunrise">6:00am</span></button></li>
-                        <li class="list-group-item-inner"><button type="button" class="btn btn-dark">Sunset: <span id="sunset">6:00pm</span></button></li>
+                        <li class="list-group-item-inner"><button type="button" class="btn btn-warning">Sunrise: <span
+                                    id="sunrise">6:00am</span></button></li>
+                        <li class="list-group-item-inner"><button type="button" class="btn btn-dark">Sunset: <span
+                                    id="sunset">6:00pm</span></button></li>
                         <li class="list-group-item-inner"><button type="button" class="btn btn-secondary">Humidity: <span id="humidity">0</span>%</button></li>
                         <li class="list-group-item-inner"><button type="button" class="btn btn-info">Wind: <span id="wind">11</span>mph</button></li>
                     </ul>
@@ -53,22 +55,23 @@
         </div>
      
         <!-- This component shows the M-F weather details -->
-        <div class="row">
-            <div class="col">
-                <div class="card forecast">
-                    <div class="card-body">
+        <!-- <div class="row">
+            <div class="col"> -->
+                <div class="row weather-forecast card-body" id="forecast">
+                    <!-- <div class="col-2"></div> -->
+                    <!-- <div class="card-body">
                         <h5 class="card-title">Monday</h5>
                         <p class="card-text">86° F <span class="weatherEmoji"> 🌤</span></p>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div>
             </div>
             <div class="col">
-                <div class="card forecast">
-                    <div class="card-body">
+                <div class="card forecast"> -->
+                    <!-- <div class="card-body">
                         <h5 class="card-title">Tuesday</h5>
                         <p class="card-text">87° F <span class="weatherEmoji"> 🌤</span></p>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div>
             </div>
             <div class="col">
                 <div class="card forecast">
@@ -92,9 +95,9 @@
                         <h5 class="card-title">Friday</h5>
                         <p class="card-text">85° F <span class="weatherEmoji"> ☀</span></p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
     </div>
     <br />
 </div>
