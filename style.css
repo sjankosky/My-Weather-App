@@ -1,20 +1,15 @@
 .weather-app-wrapper {
-  /* think about renaming the body into a div name to house this */
   border: 2px solid #596aca;
-  /* margin: 20px; */
   margin: 20px auto;
   padding: 20px;
   max-width: 1200px;
   width: 70rem;
   /* width: 80%; */
-  border-radius: 10px; /*not sold on this*/
+  border-radius: 10px;
   background: #e0e9f1;
-  /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
 }
-
 body {
   background: #aab0bb;
-  /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
 }
 h1 {
   color: #42a5f5;
@@ -112,7 +107,6 @@ footer {
 .forecastCard {
   border: none;
 }
-
 .list-group-item-inner {
   list-style: none;
   margin: 0px 5px;
