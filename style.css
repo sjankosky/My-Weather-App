@@ -58,7 +58,7 @@ footer {
   font-size: 12px;
   line-height: 1;
 }
-.current-date::first-letter {
+.current-date:first-letter {
   text-transform: capitalize;
 }
 .city-date-position {
@@ -103,7 +103,11 @@ footer {
 }
 #forecast {
   color: #1ab2a8;
+  background: #e0e9f1;
   text-align: center;
+}
+.forecastCard {
+  border: none;
 }
 
 .list-group-item-inner {
