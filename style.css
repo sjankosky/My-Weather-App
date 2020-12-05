@@ -4,9 +4,9 @@
   /* margin: 20px; */
   margin: 20px auto;
   padding: 20px;
-  /* max-width: 1200px; */
-  width: 70rem;
-  /* width: 80%; */
+  max-width: 1200px;
+  /* width: 70rem; */
+  width: 80%;
   border-radius: 10px; /*not sold on this*/
   background: #e0e9f1;
   /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
@@ -54,6 +54,19 @@ footer {
 .card-text {
   margin-bottom: 10px;
 }
+.today {
+  text-align: center;
+  width: 60%;
+  /* width: 40rem; */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-width: thick;
+  border-color: #1ab2a8;
+  color: #1ab2a8;
+  font-size: 25px;
+  padding: 10px 40px;
+}
 .current-date {
   color: #5a6275;
   font-style: italic;
@@ -65,19 +78,6 @@ footer {
 }
 .city-date-position {
   margin-top: 25px;
-}
-.today {
-  text-align: center;
-  /* width: 50%; */
-  width: 40rem;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  border-width: thick;
-  border-color: #1ab2a8;
-  color: #1ab2a8;
-  font-size: 25px;
-  padding: 10px 40px;
 }
 
 #current-temp,
