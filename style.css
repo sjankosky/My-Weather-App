@@ -20,6 +20,7 @@ form {
 }
 footer {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .line {
@@ -103,6 +104,7 @@ footer {
   color: #1ab2a8;
   background: #e0e9f1;
   text-align: center;
+  padding-bottom: 0px;
 }
 .forecastCard {
   border: none;
