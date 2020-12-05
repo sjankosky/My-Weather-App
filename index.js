@@ -68,9 +68,6 @@ function displayWeather(response) {
   document.querySelector("#current-description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#store-city").innerHTML = response.data.name;
-  // document.querySelector("#sunrise").innerHTML = new Date(
-  //   response.data.sys.sunrise * 1000
-  // );
   document.querySelector("#sunrise").innerHTML = formatHours(
     response.data.sys.sunrise * 1000
   );

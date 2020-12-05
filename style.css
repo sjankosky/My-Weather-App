@@ -2,8 +2,8 @@
   border: 2px solid #596aca;
   margin: 20px auto;
   padding: 20px;
-  max-width: 1200px;
-  width: 70rem;
+  /* max-width: 1200px;
+  width: 70rem; */
   border-radius: 10px;
   background: #e0e9f1;
 }
@@ -51,8 +51,8 @@ footer {
 }
 .today {
   text-align: center;
-  /* width: 60%; */
-  width: 40rem;
+  width: 60%;
+  /* width: 40rem; */
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
