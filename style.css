@@ -5,8 +5,8 @@
   margin: 20px auto;
   padding: 20px;
   max-width: 1200px;
-  /* width: 70rem; */
-  width: 80%;
+  width: 70rem;
+  /* width: 80%; */
   border-radius: 10px; /*not sold on this*/
   background: #e0e9f1;
   /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
@@ -56,8 +56,8 @@ footer {
 }
 .today {
   text-align: center;
-  width: 60%;
-  /* width: 40rem; */
+  /* width: 60%; */
+  width: 40rem;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
