@@ -9,13 +9,7 @@
   background: #e0e9f1;
   /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
 }
-/* .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-} */
+
 body {
   background: #aab0bb;
   /* background-image: url(https://www.israel21c.org/wp-content/uploads/2018/12/main-pic-4-1168x657.jpg); */
@@ -32,7 +26,8 @@ footer {
 }
 
 .line {
-  border-top: 4px solid #d9edfd;
+  border-top: 4px solid #4d94ce;
+  opacity: 60%;
 }
 .enterCity {
   border-color: #596aca;
@@ -59,12 +54,9 @@ footer {
 }
 .current-date {
   color: #5a6275;
-  /* font-weight: bolder; */
   font-style: italic;
   font-size: 12px;
   line-height: 1;
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
 }
 .current-date::first-letter {
   text-transform: capitalize;
@@ -84,13 +76,6 @@ footer {
   font-size: 25px;
   padding: 10px 40px;
 }
-
-/* .present {
-  color: #5a6275;
-  font-weight: bolder;
-  font-size: 30px;
-  padding: 30px 0;
-} */
 
 #current-temp,
 .formatDegree {
@@ -117,11 +102,10 @@ footer {
   font-size: 40px;
 }
 #forecast {
-  border-color: #1ab2a8;
-  border-width: medium;
   color: #1ab2a8;
   text-align: center;
 }
+
 .list-group-item-inner {
   list-style: none;
   margin: 0px 5px;
