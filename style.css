@@ -73,6 +73,7 @@ footer {
 }
 .city-date-position {
   margin-top: 25px;
+  padding: 0;
 }
 
 #current-temp,
