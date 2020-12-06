@@ -175,4 +175,4 @@ celsius.addEventListener("click", updateCelsius);
 let farenheitTemperature = null;
 
 //this allows for a default city and values to appear each time
-searchCity("Honolulu");
+searchCity("Reston");
