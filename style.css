@@ -21,7 +21,6 @@ footer {
   text-align: center;
   margin-top: -20px;
 }
-
 .line {
   border-top: 4px solid #4d94ce;
   opacity: 60%;
@@ -75,7 +74,6 @@ footer {
   margin-top: 25px;
   padding: 0;
 }
-
 #current-temp,
 .formatDegree {
   font-size: 30px;
@@ -85,7 +83,6 @@ footer {
   position: relative;
   top: -12px;
 }
-
 #farenheit {
   padding-left: 5px;
 }
